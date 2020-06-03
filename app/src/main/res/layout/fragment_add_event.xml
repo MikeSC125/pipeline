@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AddEventFragment">
+
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <EditText
+                android:id="@+id/titleEditText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="24dp"
+                android:ems="10"
+                android:gravity="center_horizontal"
+                android:hint="Event Title"
+                android:inputType="textPersonName"
+                android:textAllCaps="false" />
+
+            <EditText
+                android:id="@+id/dateTextEdit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/titleEditText"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="10dp"
+                android:ems="10"
+                android:gravity="center_horizontal"
+                android:hint="DD/MM/YYYY"
+                android:inputType="date" />
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/linear"
+                android:layout_below="@+id/categorySpinner"
+                android:layout_centerInParent="true"
+                android:layout_marginTop="20dp">
+
+                <EditText
+                    android:id="@+id/newTaskEditText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:hint="Task"
+                    android:inputType="textPersonName" />
+
+                <Button
+                    android:id="@+id/addButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="#7F7F7F"
+                    android:backgroundTint="#7F7F7F"
+                    android:text="Add" />
+            </LinearLayout>
+
+            <ListView
+                android:id="@+id/listView"
+                android:layout_height="150dp"
+                android:layout_width="match_parent"
+                android:layout_below="@+id/linear"
+                android:layout_marginTop="20dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:nestedScrollingEnabled="true"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentEnd="true" />
+
+            <Spinner
+                android:id="@+id/categorySpinner"
+                android:layout_width="120dp"
+                android:layout_height="30dp"
+                android:layout_below="@+id/descriptionTextEdit"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentEnd="true"
+                android:layout_marginStart="100dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="50dp"
+                android:entries="@array/colors"
+                app:layout_constraintHorizontal_bias="0.497"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <EditText
+                android:id="@+id/descriptionTextEdit"
+                android:layout_width="281dp"
+                android:layout_height="85dp"
+                android:layout_below="@+id/dateTextEdit"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentEnd="true"
+                android:layout_margin="10dp"
+                android:layout_marginTop="32dp"
+                android:ems="10"
+                android:gravity="center"
+                android:hint="Event Description"
+                android:inputType="textPersonName" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/listView"
+                android:layout_centerInParent="true"
+                android:layout_marginTop="20dp">
+                <com.google.android.material.floatingactionbutton.FloatingActionButton
+                    android:id="@+id/cancelFloatingAction"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="100dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginEnd="50dp"
+                    android:clickable="true"
+                    android:padding="20dp"
+                    android:src="@drawable/ic_close_black_24dp"
+                    app:backgroundTint="@color/grey"
+                    android:focusable="true" />
+                <com.google.android.material.floatingactionbutton.FloatingActionButton
+                    android:id="@+id/confirmFloatingAction"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginEnd="100dp"
+                    android:layout_marginStart="50dp"
+                    android:clickable="true"
+                    android:padding="20dp"
+                    android:src="@drawable/ic_done_black_24dp"
+                    app:backgroundTint="@color/grey"
+                    android:focusable="true" />
+            </LinearLayout>
+        </RelativeLayout>
+    </ScrollView>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

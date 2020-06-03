@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">pipeline</string>
+
+    <string-array name="colors">
+        <item name="1">Examination</item>
+        <item name="2">Assignment</item>
+        <item name="3">Academic</item>
+        <item name="4">Conference</item>
+        <item name="4">Leisure</item>
+        <item name="4">Meeting</item>
+
+    </string-array>
+
+    <string name="open">Open Navigation Drawer</string>
+    <string name="close">Close Navigation Drawer</string>
+
+</resources>
